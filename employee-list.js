@@ -2,7 +2,7 @@ $(function() {
     const employees = JSON.parse(localStorage.getItem('employees'));
 
     $('#employee-table').DataTable({
-        data: employees,
+        data: employees.concat(mock),
         columns: [
             { title: 'First Name', data: 'firstName' },
             { title: 'Last Name', data: 'lastName' },
